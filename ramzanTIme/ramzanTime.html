@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+#result{
+    background-image: url("madina-sharif.jpg");
+   color:blue;
+    font-size: 50px;
+background-repeat: no-repeat;
+background-position: 80% 60%;
+}
+    
+        
+        
+    
+    
+#top{
+    background:gray;
+color: white;
+text-shadow: 5px 5px 5px  black;
+font-size: 30px
+}
+
+ #link{
+     font-size: 20px
+ }   
+
+#center{
+    color:white;
+    
+}
+</style>
+<div id="top">
+<h1 id="title">RAMADAN TIME </h1>
+<p id="center">ENTER DATE FOR KNOW <br>SEHRI TIME AND IFTAR TIME</p>
+</div>
+<input type="text" id="userInput" size="30" placeholder="Enter only number" />
+<a href="javascript:void(0)" id="link" onclick="time()">result</a>
+<div id="result">
+
+</div>
+<script>
+function time(){
+var sahriTime = [4.15,4.15,4.14,4.14,4.14,4.13,4.13,4.13,4.13,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.12,4.13,4.13,4.13,4.13];
+var iftarTime = [7.15,7.15,7.16,7.16,7.17,7.17,7.18,7.18,7.19,7.19,7.19,7.20,7.20,7.21,7.21,7.21,7.22,7.22,7.22,7.23,7.23,7.23,7.24,7.24,7.24,7.24,7.24,7.25,7.25,7.25];
+var pera = document.getElementById("userInput").value;
+for(var i = 0; i<sahriTime.length; i++)
+if(sahriTime[i]==sahriTime[pera]& iftarTime[i]==iftarTime[pera]){
+     var a = document.getElementById("result").innerHTML=" DATE OF RAMADAN :"+pera+"<br />"+"SEHRI TIME" + sahriTime[i]+ "<br>"+ "IFTAR TIME" + iftarTime[i]
+a.className="abc"
+}
+}
+
+
+</script>
+
+  
+</body>
+</html>
